@@ -2,4 +2,7 @@ import pygame
 
 pygame.init()
 
-win = pygf
+WIDTH = 500
+HEIGHT = 500
+
+win = pygame.display.set_mode((WIDTH, HEIGHT))
