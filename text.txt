@@ -1,0 +1,1 @@
+{"parent": win, "content": "TEMP", "font": "arial", "font_colour": (0, 0, 0), "size": 20, "x": 20, "y": 20}
