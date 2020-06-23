@@ -1,1 +1,8 @@
-{"parent": win, "content": "TEMP", "font": "arial", "font_colour": (0, 0, 0), "size": 20, "x": 20, "y": 20}
+{"parent": win, "name": "temp", "content": "TEMPERATURE: ", "font": "arialblack", "type": "sys", "font_colour": (0, 0, 0), "size": 40, "x": 230, "y": 140}
+{"parent": win, "name": "temperature", "content": DATA["temperature"], "font": "arialblack", "type": "sys", "font_colour": (0, 0, 0), "size": 40, "x": 600, "y": 140}
+{"parent": win, "name": "humid", "content": "HUMIDITY: ", "font": "arialblack", "type": "sys", "font_colour": (0, 0, 0), "size": 40, "x": 800, "y": 140}
+{"parent": win, "name": "humidData", "content": DATA["humidity"], "font": "arialblack", "type": "sys", "font_colour": (0, 0, 0), "size": 40, "x": 1060, "y": 140}
+{"parent": win, "name": "henry's", "content": "Henry's", "font": "Neufreit-ExtraBold.otf", "type": "font", "font_colour": (0, 0, 0), "size": 100, "x": 350, "y": 6}
+{"parent": win, "name": "room", "content": "Room", "font": "TESLA.ttf", "type": "font", "font_colour": (0, 0, 0), "size": 100, "x": 750, "y": 26}
+{"parent": win, "name": "polltime", "content": "Poll Time:", "font": "arial", "type": "sys", "font_colour": (0, 0, 0), "size": 20, "x": 120, "y": 810}
+{"parent": win, "name": "pt", "content": str(POLLTIME) + "ms", "font": "arial", "type": "sys", "font_colour": (0, 0, 0), "size": 20, "x": 200, "y": 810}

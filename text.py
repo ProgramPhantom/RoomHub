@@ -3,27 +3,33 @@ import posMananger
 
 
 class Text:
-    def __init__(self, parent, content, font, font_colour, size, x, y):
+    def __init__(self, parent, name, content, font, type, font_colour, size, x, y):
         self.parent = parent  # Parent surface object
 
         self.content = content
         self.font_colour = font_colour
         self.font_size = size
+        self.type = type
 
-        self.font = pygame.font.SysFont(font, size)
+        if type == "sys":
+            self.font = pygame.font.SysFont(font, size)
+        else:
+            self.font = pygame.font.Font("fonts/" + font, self.font_size)
+
         self.text = self.font.render(content, 1, font_colour)
+        self.name = name
 
-        if x == "center":
-            posMananger.center_x()
+        self.rect = self.text.get_rect()
+
+        if x == "centre":
+            self.x = posMananger.center_x(parent.get_width(), self.rect.width)
         else:
             self.x = x
 
-        if y == "center":
-            posMananger.center_y()
+        if y == "centre":
+            self.y = posMananger.center_y(parent.get_height(), self.rect.height)
         else:
             self.y = y
-
-        self.rect = self.text.get_rect()
 
     def draw(self):
         self.parent.blit(self.text, (self.x, self.y))
