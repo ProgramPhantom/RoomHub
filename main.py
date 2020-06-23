@@ -34,7 +34,7 @@ texts = {}
 win = pygame.display.set_mode((WIDTH, HEIGHT))
 
 tempFont = pygame.font.Font('fonts/Arkitech Bold.ttf', 10)
-
+pygame.display.set_caption("Henry's Room")
 
 def load():
     with open("text.txt", "r") as text:
@@ -62,7 +62,7 @@ def update_stats():
     texts["temperature"].update_text(str(DATA["temperature"]) + "°C")
 
     DATA["humidity"] = getAtmosData.getTemps()["humidity"]  # This is cringe.
-    texts["humidData"].update_text(str(DATA["humidity"]) + "°C")
+    texts["humidData"].update_text(str(DATA["humidity"]) + "%")
 
 
 # Timers
